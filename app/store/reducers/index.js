@@ -1,7 +1,9 @@
 import {combineReducers} from "redux";
 
-import test from "./test";
+import applications from "./applications";
+import servers from "./servers";
 
 export default combineReducers({
-    test
+    applications,
+    servers
 });

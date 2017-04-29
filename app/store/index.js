@@ -17,6 +17,13 @@ let store = createStore(
     composeEnhancers(applyMiddleware(promise(), thunk /*, logger()*/), autoRehydrate())
 );
 
-persistStore(store, { whitelist: ['test'] });
+if (module.hot) {
+    // Enable Webpack hot module replacement for reducers
+    module.hot.accept('./reducers', () => {
+        store.replaceReducer(AppReducer);
+    });
+}
+
+persistStore(store);
 
 export default store;

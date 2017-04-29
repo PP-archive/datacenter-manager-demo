@@ -38,6 +38,7 @@ module.exports = {
                             presets: [['es2015', { 'modules': false }], 'react'],
                             plugins: ['transform-async-to-generator',
                                 'transform-decorators-legacy',
+                                'transform-object-rest-spread',
                                 'transform-runtime',
                                 'react-html-attrs',
                                 'react-hot-loader/babel'],

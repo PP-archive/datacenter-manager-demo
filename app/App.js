@@ -4,8 +4,6 @@ import {Provider} from "react-redux";
 import {Router, Route} from "react-router";
 import {autobind} from "core-decorators";
 
-import "bootstrap/dist/css/bootstrap.css";
-
 import store from "./store";
 
 import Layout from "./layouts/Default";
